@@ -25,3 +25,18 @@ in there, all the necessary files that allows the function to work are present.
 1. Include `main.h`
 2. Call the function `_printf` and pass in a string with optional arguments
 3. Use the required format specifier.
+
+# Format Specifiers
+
+| Format Specifier | Description |
+| ------ | ------ |
+| %c | prints a character to stdout. |
+| %i, %d | prints an integer to stdout. |
+| %u | prints an unsigned integer. |
+| %s | prints a string to stdout. |
+| %r | reverses a string. |
+| %b | converts a number to binary. |
+| %o | converts a number to octal base. |
+| %x %X | converts a number to hexadecimal. |
+| %p | prints the memory address of an argument. |
+
