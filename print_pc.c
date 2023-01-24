@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_cent - prints character % to stdout
+ * print_pc - prints character % to stdout
  * @args: variadic parameter
  *
  * Return: number of characters printed
