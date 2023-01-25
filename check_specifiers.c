@@ -19,6 +19,7 @@ int *check_specifier(int i, char *copyfmt, va_list args)
 			{"o", print_octal},
 			{"x", print_hex_low},
 			{"X", print_hex_upper},
+			{"S", print_str_esp},
 			{NULL, NULL}
 			};
 	int j = 0, k = 1, *count2;

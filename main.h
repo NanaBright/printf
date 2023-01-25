@@ -37,5 +37,7 @@ int print_octal(va_list args);
 int print_hex_low(va_list args);
 int print_hex_upper(va_list args);
 char *change_hex_low(unsigned int num, int base);
+int print_str_esp(va_list args);
+char *replace_str(char *s);
 
 #endif
