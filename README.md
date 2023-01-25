@@ -1,7 +1,13 @@
 # _printf project
 A project by ALX on _printf from Okpala Chibuike Emmanuel and Bright Yanchirah
 
-# Prototype
+# Environment & Requirements
+1. Language: C
+2. OS: Ubuntu 20.04 LTS
+3. Compiler: gcc 4.8.4 (-Wall -Werror -Wextra -pedantic -std=gnu89)
+4. Coding style; Betty Style
+
+# Prototypes
 Recreation of function printf from the C standard library
 
 ```c
