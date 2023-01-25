@@ -13,7 +13,7 @@ int *check_specifier(int i, char *copyfmt, va_list args)
 			{"s", print_str},
 			{"%", print_pc},
 			{"i", print_int},
-			{"d", print_deci},
+			{"d", print_int},
 			{NULL, NULL}
 			};
 	int j = 0, k = 1, *count2;

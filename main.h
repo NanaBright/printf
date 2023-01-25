@@ -30,6 +30,6 @@ int print_char(va_list);
 int print_str(va_list);
 int print_pc(va_list args __attribute__((unused)));
 int print_int(va_list);
-int print_deci(va_list);
+char *change_base(unsigned int num, int base);
 
 #endif

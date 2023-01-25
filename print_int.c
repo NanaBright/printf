@@ -8,29 +8,24 @@
 
 int print_int(va_list args)
 {
+	char *str;
+	char *sign;
 	int i = 0;
-	int numb;
-	int my_arr[10];
-	int count = 0;
-	char x[1];
+	int num;
 
-	numb = va_arg(args, int);
+	unsigned int num2;
 
-	while (numb != 0)
+	sign = "-";
+	num = va_arg(args, int);
+	num2 = num;
+	if (num < 0)
 	{
-		my_arr[i] = (numb % 10);
-		numb = numb / 10;
-		if (numb == 0)
-			break;
-		else
-			i++;
+		_putchar(sign);
+		num2 = -num;
+		i = 1;
 	}
+	str = change_base(num2, 10);
+	i += printarg(str);
 
-	for (i = 0; i >= 0; i--)
-	{
-		x[0] = ('0' + my_arr[i]);
-		count += write(1, x, 1);
-	}
-
-	return (count);
+	return (i);
 }
