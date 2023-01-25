@@ -10,19 +10,18 @@
 
 int print_str(va_list args)
 {
-	int i;
-	int count = 6;
+	int i = 6;
 	char *str;
 
-	str = va_arg(args, char *);
-	if (str == NULL)
-		return (-1);
-
-	while (str[i])
+	str = va_arg(args, char*);
+	if (str)
 	{
-		count = write(1, &str[i], 1);
-		i = i + 1;
+		i = printarg(str);
+	}
+	else
+	{
+		printarg("(null)");
 	}
 
-	return (count);
+	return (i);
 }

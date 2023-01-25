@@ -22,9 +22,12 @@ typedef struct func
 	int (*f)(va_list);
 } func_t;
 
+int _putchar(char *c);
+int _strlen(char *s);
+int printarg(char *c);
 int print_char(va_list);
 int print_str(va_list);
-int print_pc(va_list);
+int print_pc(va_list args __attribute__((unused)));
 int print_int(va_list);
 int print_deci(va_list);
 

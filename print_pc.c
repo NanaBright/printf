@@ -7,11 +7,13 @@
  * Return: number of characters printed
  */
 
-int print_pc(va_list args)
+int print_pc(va_list args __attribute__((unused)))
 {
-	(void)args;
+	char *p;
+	int i;
 
-	write(1, "%", 1);
+	p = "%";
+	i = _putchar(p);
 
-	return (1);
+	return (i);
 }
