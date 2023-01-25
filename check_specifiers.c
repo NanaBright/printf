@@ -14,6 +14,7 @@ int *check_specifier(int i, char *copyfmt, va_list args)
 			{"%", print_pc},
 			{"i", print_int},
 			{"d", print_int},
+			{"b", print_bin},
 			{NULL, NULL}
 			};
 	int j = 0, k = 1, *count2;

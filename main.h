@@ -31,5 +31,6 @@ int print_str(va_list);
 int print_pc(va_list args __attribute__((unused)));
 int print_int(va_list);
 char *change_base(unsigned int num, int base);
+int print_bin(va_list args);
 
 #endif
