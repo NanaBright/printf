@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * _printarg - writes the character c to stdout
+ * printarg - writes the character c to stdout
  * @c: The character to print
  *
  * Return: On success 1.
