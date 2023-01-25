@@ -19,3 +19,19 @@ int print_char(va_list args)
 	}
 	return (0);
 }
+
+/**
+ * _puts - prints a string with newline
+ * @str: the string to print
+ *
+ * Return:( str-a)
+ */
+
+int _puts(char *str)
+{
+	char *a = str;/*declaration of variables*/
+
+	while (*str)
+		print_char(*str++);
+	return (str - a);
+}
