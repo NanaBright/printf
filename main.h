@@ -7,7 +7,7 @@
 #include <unistd.h>
 
 int _printf(const char *format, ...);
-int (*check_specifier(const char *format))(va_list);
+int *check_specifier(int i, char *copyfmt, va_list args);
 
 
 /**
@@ -16,14 +16,15 @@ int (*check_specifier(const char *format))(va_list);
  * @f: func to handle printing
  */
 
-typedef struct func
+typedef struct fn
 {
-	char *t;
-	int (*f)(va_list);
-} func_t;
+	char *ob;
+	int (*type)(va_list var);
+} fn_t;
 
 int _putchar(char *c);
 int _strlen(char *s);
+char *_strcpy(char *dest, const char *str);
 int printarg(char *c);
 int print_char(va_list);
 int print_str(va_list);

@@ -1,55 +1,44 @@
-#include <stdarg.h>
-#include <stdio.h>
-#include <unistd.h>
 #include "main.h"
 /**
- * _printf - prints a string in a formatted way
- * @format: string to print (char *)
- * @...: variadic parameters (unknown)
- *
- * Return: number of characters printed
- */
-
+ * _printf - A printf clone
+ * @format: const pointer to a char - % include formats
+ * Return: number of characters printed.
+*/
 int _printf(const char *format, ...)
 {
-	int i = 0, count = 0, value = 0, (*f)(va_list);
+	int i = 0, *count, *count3;
+	int ctbuffer[2];
+	int ctbuffer3[2];
+	char *copyfmt;
+	char copyarray[10000];
 	va_list args;
 
-	va_start(args, format);
-	/*Prevent parsing a null pointer*/
-	if (format == NULL)
-		return (-1);
-	while (format[i]) /*Print each character of string*/
+	count = &ctbuffer[0];
+	count3 = &ctbuffer3[0];
+	count[0] = 0;
+	count[1] = -1;
+	if (format != NULL)
 	{
-		if (format[i] != '%')
+		count[1] = 0;
+		copyfmt = _strcpy(copyarray, format);
+		va_start(args, format);
+		while (copyfmt[i] != '\0')
 		{
-			value = write(1, &format[i], 1);
-			count = count + value;
+			if (copyfmt[i] == '%')
+			{
+				count3 = check_specifier(i, copyfmt, args);
+				if (count3[1] == -1)
+				return (-1);
+				count[1] += count3[1];
+				i += count3[0];
+			}
+			else
+			{
+				count[1] += _putchar(&copyfmt[i]);
+			}
 			i++;
-			continue;
 		}
-		if (format[i] == '%')
-		{
-			f = check_specifier(&format[i + 1]);
-			if (f != NULL)
-			{
-				value = f(args);
-				count = count + value;
-				i = i + 2;
-				continue;
-			}
-			if (format[i + 1] == '\0')
-			{
-				break;
-			}
-			if (format[i + 1] != '\0')
-			{
-				value = write(1, &format[i + 1], 1);
-				count = count + value;
-				i = i + 2;
-				continue;
-			}
-		}
+		va_end(args);
 	}
-	return (count);
+return (count[1]);
 }
