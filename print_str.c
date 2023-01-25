@@ -11,7 +11,7 @@
 int print_str(va_list args)
 {
 	int i;
-	int count = 0;
+	int count = 6;
 	char *str;
 
 	str = va_arg(args, char *);
