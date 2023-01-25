@@ -15,6 +15,10 @@ int *check_specifier(int i, char *copyfmt, va_list args)
 			{"i", print_int},
 			{"d", print_int},
 			{"b", print_bin},
+			{"u", print_unsigned},
+			{"o", print_octal},
+			{"x", print_hex_low},
+			{"X", print_hex_upper},
 			{NULL, NULL}
 			};
 	int j = 0, k = 1, *count2;

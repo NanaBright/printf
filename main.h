@@ -32,5 +32,10 @@ int print_pc(va_list args __attribute__((unused)));
 int print_int(va_list);
 char *change_base(unsigned int num, int base);
 int print_bin(va_list args);
+int print_unsigned(va_list args);
+int print_octal(va_list args);
+int print_hex_low(va_list args);
+int print_hex_upper(va_list args);
+char *change_hex_low(unsigned int num, int base);
 
 #endif
