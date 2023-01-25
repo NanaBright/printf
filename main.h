@@ -9,6 +9,7 @@
 int _printf(const char *format, ...);
 int (*check_specifier(const char *format))(va_list);
 
+
 /**
  * struct func - struct for specifier to printer
  * @t: char to compare
