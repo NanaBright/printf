@@ -40,5 +40,8 @@ char *change_hex_low(unsigned int num, int base);
 int print_str_esp(va_list args);
 char *replace_str(char *s);
 int print_add(va_list args);
+int print_reversed(va_list ags);
+char *rot13(char *n);
+int print_rot13(va_list args);
 
 #endif
