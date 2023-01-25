@@ -20,6 +20,7 @@ int *check_specifier(int i, char *copyfmt, va_list args)
 			{"x", print_hex_low},
 			{"X", print_hex_upper},
 			{"S", print_str_esp},
+			{"p", print_add},
 			{NULL, NULL}
 			};
 	int j = 0, k = 1, *count2;
