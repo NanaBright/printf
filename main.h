@@ -11,9 +11,9 @@ int *check_specifier(int i, char *copyfmt, va_list args);
 
 
 /**
- * struct func - struct for specifier to printer
- * @t: char to compare
- * @f: func to handle printing
+ * struct fn - struct for specifier to printer
+ * @ob: char to compare
+ * @type: func to handle printing
  */
 
 typedef struct fn
