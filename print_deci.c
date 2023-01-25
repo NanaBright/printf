@@ -22,6 +22,7 @@ int print_deci(va_list args)
 		numb = numb / 10;
 		if (numb == 0)
 			break;
+		else
 			i++;
 	}
 
