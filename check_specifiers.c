@@ -22,6 +22,7 @@ int *check_specifier(int i, char *copyfmt, va_list args)
 			{"S", print_str_esp},
 			{"p", print_add},
 			{"R", print_rot13},
+			{"r", print_reversed},
 			{NULL, NULL}
 			};
 	int j = 0, k = 1, *count2;
