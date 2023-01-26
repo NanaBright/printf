@@ -43,5 +43,6 @@ int print_add(va_list args);
 int print_reversed(va_list ags);
 char *rot13(char *n);
 int print_rot13(va_list args);
+int print_address(va_list ap, params_t *params);
 
 #endif
