@@ -9,7 +9,6 @@
 int _printf(const char *format, ...);
 int *check_specifier(int i, char *copyfmt, va_list args);
 
-
 /**
  * struct fn - struct for specifier to printer
  * @ob: char to compare
@@ -21,6 +20,20 @@ typedef struct fn
 	char *ob;
 	int (*type)(va_list var);
 } fn_t;
+
+/**
+ * struct flags - struct containing flags to "turn on"
+ * when a flag specifier is passed to _printf()
+ * @plus: flag for the '+' character
+ * @space: flag for the ' ' character
+ * @hash: flag for the '#' character
+ */
+typedef struct flags
+{
+	int plus;
+	int space;
+	int hash;
+} fl_t;
 
 int _putchar(char *c);
 int _strlen(char *s);
@@ -41,8 +54,9 @@ int print_str_esp(va_list args);
 char *replace_str(char *s);
 int print_add(va_list args);
 int print_reversed(va_list ags);
-char *rot13(char *n);
+char *rot13(char *str);
 int print_rot13(va_list args);
-
+int print_flag(char s, fl_t *f);
+int count_digit(int i);
 
 #endif
